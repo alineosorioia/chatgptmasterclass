@@ -179,6 +179,46 @@ footer a{color:var(--green);text-decoration:none}
 .why-desc{font-size:14px;color:var(--g2);line-height:1.6}
 @media(max-width:760px){.why-grid{grid-template-columns:1fr 1fr}}
 
+
+/* IDENTIFICAÇÃO */
+.ident-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:48px;border:.5px solid var(--cb);border-radius:14px;overflow:hidden}
+.ident-i{display:flex;align-items:flex-start;gap:12px;padding:16px 22px;border-bottom:.5px solid var(--cb);border-right:.5px solid var(--cb);transition:.2s}
+.ident-i:nth-child(even){border-right:none}
+.ident-i:nth-last-child(-n+2){border-bottom:none}
+.ident-i:hover{background:rgba(255,60,60,.04)}
+.ident-x{width:20px;height:20px;border-radius:50%;background:rgba(255,80,80,.1);border:.5px solid rgba(255,80,80,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:11px}
+.ident-text{font-size:14px;color:var(--g1);line-height:1.55}
+
+/* PROVA SOCIAL */
+.ps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
+.ps-card{background:var(--card);border:.5px solid var(--cb);border-radius:12px;overflow:hidden;transition:.2s;min-height:220px}
+.ps-card:hover{border-color:var(--green-border)}
+.ps-video{width:100%;aspect-ratio:9/16;background:#0a0f0a;position:relative;display:flex;align-items:center;justify-content:center;max-height:320px}
+.ps-video iframe{width:100%;height:100%;border:none}
+.ps-ph{width:100%;aspect-ratio:16/9;background:linear-gradient(145deg,#111811,#0b0f0b);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border-bottom:.5px solid var(--cb)}
+.ps-ph-icon{width:44px;height:44px;border-radius:50%;background:var(--green-glow);border:.5px solid var(--green-border);display:flex;align-items:center;justify-content:center;font-size:18px}
+.ps-ph-txt{font-size:12px;color:var(--g3);font-family:'Nunito',sans-serif}
+.ps-info{padding:14px 16px}
+.ps-name{font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;margin-bottom:4px}
+.ps-role{font-size:12px;color:var(--g2)}
+.ps-quote{font-size:13px;color:var(--g2);margin-top:8px;line-height:1.5;font-style:italic}
+@media(max-width:760px){.ps-grid{grid-template-columns:1fr 1fr}.ident-grid{grid-template-columns:1fr}.ident-i{border-right:none}.ident-i:nth-last-child(-n+2){border-bottom:.5px solid var(--cb)}.ident-i:last-child{border-bottom:none}}
+
+/* ROI */
+.roi-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0;margin-top:48px}
+.roi-box{background:var(--card);border:.5px solid var(--cb);border-radius:12px;padding:28px 32px;text-align:center;min-width:160px;transition:.2s}
+.roi-box:hover{border-color:var(--green-border)}
+.roi-box.hi{border-color:var(--green-border);background:linear-gradient(145deg,#111a11,#0b100b)}
+.roi-num{font-family:'Nunito',sans-serif;font-weight:900;font-size:36px;color:var(--green);line-height:1;margin-bottom:6px}
+.roi-lbl{font-size:13px;color:var(--g2);line-height:1.4}
+.roi-arrow{font-size:28px;color:var(--green);padding:0 12px;opacity:.6}
+@media(max-width:760px){.roi-flow{flex-direction:column}.roi-arrow{transform:rotate(90deg)}}
+
+/* URGENCY */
+.urgency-box{background:linear-gradient(135deg,#111a11,#0b100b);border:.5px solid var(--green-border);border-radius:12px;padding:28px 32px;text-align:center;margin-bottom:32px}
+.urgency-box p{font-size:17px;color:var(--g1);line-height:1.7}
+.urgency-box strong{color:var(--green)}
+
 </style>
 </head>
 <body>
@@ -186,7 +226,7 @@ footer a{color:var(--green);text-decoration:none}
 <!-- NAV -->
 <nav>
   <div class="logo">@alineosoriomkt</div>
-  <a href="https://pay.hotmart.com/K105927142C" class="nav-btn">Garantir minha vaga →</a>
+  <a href="https://pay.hotmart.com/K105927142C?checkoutMode=10" class="nav-btn">Quero sair na frente usando IA →</a>
 </nav>
 
 <!-- HERO -->
@@ -218,7 +258,7 @@ footer a{color:var(--green);text-decoration:none}
           <strong>Ao vivo no Zoom</strong>
         </div>
       </div>
-      <a href="https://pay.hotmart.com/K105927142C" class="btn-g">Quero participar por R$57 →</a>
+      <a href="https://pay.hotmart.com/K105927142C?checkoutMode=10" class="btn-g">Quero dominar o ChatGPT na prática →</a>
       <p class="hero-note">Masterclass ao vivo + 5 bônus exclusivos incluídos</p>
     </div>
     <div class="hero-card">
@@ -234,6 +274,26 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 </section>
 
+
+
+<!-- IDENTIFICAÇÃO -->
+<section class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="slabel">Você se identifica?</div>
+    <h2>Você se identifica com<br>alguma dessas <em>situações?</em></h2>
+    <p class="sec-desc">Se alguma dessas situações faz parte da sua rotina, essa masterclass foi criada para você.</p>
+    <div class="ident-grid">
+      <div class="ident-i"><div class="ident-x">😔</div><div class="ident-text">Passa horas realizando tarefas repetitivas no computador</div></div>
+      <div class="ident-i"><div class="ident-x">😔</div><div class="ident-text">Perde tempo escrevendo e-mails, documentos ou apresentações</div></div>
+      <div class="ident-i"><div class="ident-x">😔</div><div class="ident-text">Já tentou usar o ChatGPT, mas recebeu respostas genéricas e pouco úteis</div></div>
+      <div class="ident-i"><div class="ident-x">😔</div><div class="ident-text">Tem dificuldade para criar conteúdo, ideias ou textos profissionais</div></div>
+      <div class="ident-i"><div class="ident-x">😔</div><div class="ident-text">Sente que poderia produzir muito mais em menos tempo</div></div>
+      <div class="ident-i"><div class="ident-x">😔</div><div class="ident-text">Vê outras pessoas usando IA e sente que está ficando para trás</div></div>
+      <div class="ident-i"><div class="ident-x">😔</div><div class="ident-text">Quer usar IA no trabalho, mas não sabe por onde começar</div></div>
+      <div class="ident-i" style="border-right:none"><div class="ident-x">😔</div><div class="ident-text">Gostaria de aumentar produtividade sem precisar trabalhar mais horas</div></div>
+    </div>
+  </div>
+</section>
 
 <!-- POR QUE CHATGPT -->
 <section class="sec sec-alt">
@@ -276,6 +336,74 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 </section>
 
+
+<!-- PROVA SOCIAL -->
+<section class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="slabel">Resultados reais</div>
+    <h2>Quem já começou a usar IA<br>está <em>colhendo resultados</em></h2>
+    <p class="sec-desc">Veja alguns feedbacks de profissionais e empresários que começaram a aplicar Inteligência Artificial no trabalho.</p>
+    <div class="ps-grid">
+
+      <div class="ps-card">
+        <div class="ps-video">
+          <iframe src="https://www.youtube.com/embed/xpY6OazBCN4" allowfullscreen></iframe>
+        </div>
+        <div class="ps-info">
+          <div class="ps-name">Depoimento 01</div>
+          <div class="ps-role">Adicionar nome e profissão</div>
+        </div>
+      </div>
+
+      <div class="ps-card">
+        <div class="ps-video">
+          <iframe src="https://www.youtube.com/embed/lKYm1ZqRy8A" allowfullscreen></iframe>
+        </div>
+        <div class="ps-info">
+          <div class="ps-name">Depoimento 02</div>
+          <div class="ps-role">Adicionar nome e profissão</div>
+        </div>
+      </div>
+
+      <div class="ps-card">
+        <div class="ps-video">
+          <iframe src="https://www.youtube.com/embed/ooAeTvBWiPU" allowfullscreen></iframe>
+        </div>
+        <div class="ps-info">
+          <div class="ps-name">Depoimento 03</div>
+          <div class="ps-role">Adicionar nome e profissão</div>
+        </div>
+      </div>
+
+      <div class="ps-card">
+        <div class="ps-video">
+          <iframe src="https://www.youtube.com/embed/HMKAq7Lzx6M" allowfullscreen></iframe>
+        </div>
+        <div class="ps-info">
+          <div class="ps-name">Depoimento 04</div>
+          <div class="ps-role">Adicionar nome e profissão</div>
+        </div>
+      </div>
+
+      <div class="ps-card">
+        <div class="ps-video">
+          <iframe src="https://www.youtube.com/embed/VUxFDYd4k7U" allowfullscreen></iframe>
+        </div>
+        <div class="ps-info">
+          <div class="ps-name">Depoimento 05</div>
+          <div class="ps-role">Adicionar nome e profissão</div>
+        </div>
+      </div>
+
+      <div class="ps-card" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;padding:32px;border-style:dashed;opacity:.5">
+        <div style="font-size:32px">📸</div>
+        <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;color:var(--g2);text-align:center">Espaço para print<br>de WhatsApp ou Direct</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- O QUE VOCÊ VAI APRENDER -->
 <section class="sec">
   <div class="sec-inner">
@@ -308,7 +436,7 @@ footer a{color:var(--green);text-decoration:none}
 
 
 <div style="text-align:center;padding:48px 6% 0">
-  <a href="https://pay.hotmart.com/K105927142C" class="btn-g" style="display:inline-flex">Quero minha vaga por R$57 →</a>
+  <a href="https://pay.hotmart.com/K105927142C?checkoutMode=10" class="btn-g" style="display:inline-flex">Quero sair na frente usando IA →</a>
   <p style="margin-top:12px;font-size:13px;color:var(--g2)">Masterclass ao vivo no Zoom · 03/06 · Das 19h às 22h</p>
 </div>
 
@@ -390,6 +518,12 @@ footer a{color:var(--green);text-decoration:none}
 
 
 
+
+<div style="text-align:center;padding:0 6% 64px">
+  <a href="https://pay.hotmart.com/K105927142C?checkoutMode=10" class="btn-g" style="display:inline-flex">Quero acessar a masterclass e todos os BÔNUS →</a>
+  <p style="margin-top:12px;font-size:13px;color:var(--g2)">Inscrição única de R$57 · Acesso confirmado imediatamente após o pagamento</p>
+</div>
+
 <!-- QUEM SOU EU -->
 <section class="sec sec-alt">
   <div class="qs-inner">
@@ -404,7 +538,7 @@ footer a{color:var(--green);text-decoration:none}
         <p>Em 2018, decidi mudar de rota. Comecei prestando serviços como Social Media — simples, direto, aprendendo na prática. Em pouco tempo, já faturava mais do que na Engenharia. Mais do que dinheiro, ganhei autonomia. Ganhei visão de futuro.</p>
         <p>Em 2023, fundei a Agência Osorio Mídias. Ampliei serviços, formei equipe e ajudei empresas a venderem mais com estratégia e inteligência.</p>
         <p>Quando a Inteligência Artificial começou a ganhar força, eu não fiquei só assistindo. Estudei, testei, validei. Em 2025 comecei a vender Agentes de IA para empresas. E em 2026 transformei toda essa experiência no <strong style="color:var(--white)">PROTOCOLO A.G.E.N.T.E.</strong></p>
-        <p>Hoje ensino pessoas comuns a criarem uma nova fonte de renda online com Inteligência Artificial — com potencial de faturar no mínimo R$10 mil por mês.</p>
+        <p>Hoje utilizo Inteligência Artificial diariamente em projetos de marketing, vendas, produtividade e negócios. Depois de centenas de testes e aplicações práticas, desenvolvi um método simples para ajudar profissionais e empresários a utilizarem o ChatGPT de forma estratégica, economizando tempo e aumentando resultados.</p>
         <p style="color:var(--white)">Porque, para mim, sucesso não é só faturamento. É viver a liberdade nos próprios termos.</p>
       </div>
       <div class="qs-milestones">
@@ -418,7 +552,7 @@ footer a{color:var(--green);text-decoration:none}
 
 
 <div style="text-align:center;padding:48px 6% 0">
-  <a href="https://pay.hotmart.com/K105927142C" class="btn-g" style="display:inline-flex">Quero minha vaga por R$57 →</a>
+  <a href="https://pay.hotmart.com/K105927142C?checkoutMode=10" class="btn-g" style="display:inline-flex">Quero sair na frente usando IA →</a>
   <p style="margin-top:12px;font-size:13px;color:var(--g2)">Masterclass ao vivo no Zoom · 03/06 · Das 19h às 22h</p>
 </div>
 
@@ -538,12 +672,46 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 </section>
 
+
+<!-- ROI -->
+<section class="sec">
+  <div class="sec-inner" style="max-width:760px;text-align:center">
+    <div class="slabel">Retorno sobre o investimento</div>
+    <h2>Quanto vale economizar<br>tempo <em>todos os dias?</em></h2>
+    <p class="sec-desc" style="margin:0 auto">Se o ChatGPT economizar apenas 15 minutos do seu dia, o investimento desta masterclass já se paga rapidamente.</p>
+    <div class="roi-flow">
+      <div class="roi-box">
+        <div class="roi-num">15min</div>
+        <div class="roi-lbl">economizados<br>por dia</div>
+      </div>
+      <div class="roi-arrow">→</div>
+      <div class="roi-box">
+        <div class="roi-num">7,5h</div>
+        <div class="roi-lbl">economizadas<br>por mês</div>
+      </div>
+      <div class="roi-arrow">→</div>
+      <div class="roi-box">
+        <div class="roi-num">90h</div>
+        <div class="roi-lbl">economizadas<br>por ano</div>
+      </div>
+      <div class="roi-arrow">→</div>
+      <div class="roi-box hi">
+        <div class="roi-num">R$57</div>
+        <div class="roi-lbl">investimento<br>único</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- INVESTIMENTO -->
 <section class="sec sec-alt" id="inscricao">
   <div class="sec-inner" style="max-width:720px">
     <div class="slabel">Investimento</div>
     <h2>Saia na frente.<br>O mercado <em>não vai esperar.</em></h2>
     <p class="sec-desc">Uma masterclass de 3 horas que muda como você trabalha para sempre — por menos que um jantar.</p>
+    <div class="urgency-box">
+      <p>Quem aprender a usar IA agora terá uma <strong>vantagem competitiva enorme</strong> nos próximos anos.<br>Quem deixar para depois precisará correr atrás.</p>
+    </div>
     <div class="inv-card">
       <div style="display:inline-flex;align-items:center;gap:8px;background:var(--green-glow);border:.5px solid var(--green-border);border-radius:6px;padding:8px 18px;margin-bottom:24px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)">🔴 AO VIVO NO ZOOM</div>
       <p class="inv-label">Valor único · tudo incluído</p>
@@ -567,7 +735,7 @@ footer a{color:var(--green);text-decoration:none}
           <span>Incluídos</span>
         </div>
       </div>
-      <a href="https://pay.hotmart.com/K105927142C" class="btn-g lg">Garantir minha vaga por R$57 →</a>
+      <a href="https://pay.hotmart.com/K105927142C?checkoutMode=10" class="btn-g lg">Quero sair na frente usando IA →</a>
       <p class="lock-note">🔒 Pagamento seguro · Inscrição confirmada na hora</p>
     </div>
   </div>
